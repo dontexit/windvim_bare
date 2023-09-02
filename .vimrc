@@ -1,9 +1,9 @@
 let mapleader = " "
 
 " Native Vim keymaps
-nnoremap Cp :PickColor<CR>
-nnoremap Ci :PickColorInsert<CR>
 nnoremap <leader>e :Ex<CR>
+
+" Other native keymaps
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 nnoremap J mzJ`z
@@ -29,4 +29,16 @@ nnoremap <leader>bp :bnext<CR>
 nnoremap <leader>sv <C-W>v
 nnoremap <leader>sh <C-W>s
 
-nnoremap <leader
+nnoremap <leader>qq <C-W>q
+nnoremap <leader>qa :qa!<CR>
+nnoremap <leader>ww :w<CR>
+nnoremap <leader>wa :wq!<CR>
+
+nnoremap Q <nop>
+nnoremap <C-k> :cnext<CR>zz
+nnoremap <C-j> :cprev<CR>zz
+nnoremap <leader>K :lnext<CR>zz
+nnoremap <leader>J :lprev<CR>zz
+
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+nnoremap <leader>x :!chmod +x %<CR>
